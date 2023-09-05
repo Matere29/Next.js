@@ -19,11 +19,11 @@ export default function EventItem(props) {
         <div className={classes.date}>
             <time>{humanReadableDate}</time>
         </div>
-        <div>
+        <div className={classes.date}>
             <address>{formattedAddress}</address>
         </div>
     </div>
-    <div>
+    <div className={classes.actions}>
         <Link href={exploreLink}>Explore Event</Link>
     </div>
     </div>

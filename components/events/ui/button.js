@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import classes from './button.module.css'
 
+
 export default function button(props) {
-  return <Link href={props.link}
-   className={classes.btn}>{props.children}
- </Link>
+    return <Link href={props.link} className={classes.btn}>{props.children}
+      </Link>
+      
     
-  
-}
+  }

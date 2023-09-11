@@ -1,12 +1,14 @@
 
 import classes from './event-item.module.css'
-import Button from './ui/button'
-import DateIcon from './icons/date-icon'
-import AddressIcon from './icons/address-icon'
-import ArrowRightIcon from './icons/arrow-right-icon'
+import Button from '../ui/button'
+import DateIcon from '../icons/date-icon'
+import AddressIcon from '../icons/address-icon'
+import ArrowRightIcon from '../icons/arrow-right-icon'
+import Link from 'next/link'
 
 export default function EventItem(props) {
   const { title, image, date, location, id } = props
+  
   const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'long',
@@ -32,7 +34,9 @@ export default function EventItem(props) {
       <div className={classes.actions}>
        <Button link={exploreLink}>
         <span>Explore Event</span>
-        <span className={classes.icon}><ArrowRightIcon/></span>
+        <span className={classes.icon}>
+          <ArrowRightIcon/>
+          </span>
         </Button>
       </div>
     </div>
